@@ -37,7 +37,7 @@ if (token) {
 			wsUri = "wss://mockstarket.com/api/ws"
 		}
 	}else if(window.location.host.includes("dev")){
-		wsUri = "wss://dev.mockstarket.com"
+		wsUri = "wss://dev.mockstarket.com/api/ws"
 	}
 
 

@@ -82,11 +82,11 @@ $( document ).ready(function() {
         disableWheelScroll(); 
     });
 
-    $('.create-user-btn ').click(function() {
+    $('.create-account-btn ').click(function() {
         //enableScroll();
         $('.card-title-panel').addClass('show');
 
-        var create_group = $("#create-user--container");
+        var create_group = $("#create-account--container");
         
         console.log(cardGroup[0].scrollHeight);
 
@@ -157,7 +157,7 @@ $( document ).ready(function() {
 
     
 
-    $('.create-user-btn').click(function() {
+    $('.create-account-btn').click(function() {
    
         input_login_uid.prop('disabled', true);
         input_login_pw.prop('disabled', true);

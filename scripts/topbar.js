@@ -94,15 +94,15 @@ function load_topbar_vue() {
   });
 
   
-    $(".user-settings-btn").click(function() {
+    $(".account-settings-btn").click(function() {
         // console.log("clicked");
-        $("#top-bar--container .user-settings-menu--container").toggleClass(
+        $("#top-bar--container .account-settings-menu--container").toggleClass(
             "open"
         );
     });
 
-    $("#user-settings-menu-close-btn").click(function() {
-        $("#top-bar--container .user-settings-menu--container").toggleClass(
+    $("#account-settings-menu-close-btn").click(function() {
+        $("#top-bar--container .account-settings-menu--container").toggleClass(
             "open"
         );
     });

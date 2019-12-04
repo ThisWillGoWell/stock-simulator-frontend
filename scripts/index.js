@@ -240,6 +240,13 @@ $(document).ready(function() {
         let route = event.currentTarget.getAttribute("data-route");
 
         renderContent(route);
+      },
+      is_admin: function() {
+        if (vm_users.users[auth_uuid] !== undefined) {
+          return vm_users.users[auth_uuid].is_admin
+        } else {
+          return false
+        }
       }
     }
   });
@@ -488,6 +495,7 @@ $(document).ready(function() {
   var settingsView = $("#settings--view");
   var researchView = $("#research--view");
   var storeView = $("#store--view");
+  var adminView = $("#admin--view");
   var currentViewName = $("#current-view");
   var currentRoute = "dashboard";
 
@@ -560,6 +568,16 @@ $(document).ready(function() {
             allViews.removeClass("active");
             storeView.addClass("active");
             currentViewName[0].innerHTML = "Store";
+            TweenMax.from(currentViewName, 0.2, {ease: Back.easeOut.config(1.7), x:-10, opacity:0});
+          }
+          break;
+
+          case "admin":
+          if(route !== currentRoute) {
+            currentRoute = route;
+            allViews.removeClass("active");
+            adminView.addClass("active");
+            currentViewName[0].innerHTML = "Admin";
             TweenMax.from(currentViewName, 0.2, {ease: Back.easeOut.config(1.7), x:-10, opacity:0});
           }
           break;

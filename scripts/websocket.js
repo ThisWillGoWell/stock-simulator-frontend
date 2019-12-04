@@ -25,7 +25,7 @@ if (token) {
 	// host = "mockstarket.com";
 	wsUri = "wss://mockstarket.com/api/ws";
 
-	if( window.location.host.includes("localhost") ){
+	if(window.location.host.includes("localhost")){
 		if(window.location.port === "8080"){
 			// force use localhost
 			wsUri = "ws://localhost:8000/api/ws"
@@ -38,8 +38,9 @@ if (token) {
 		}
 	}else if(window.location.host.includes("dev")){
 		wsUri = "wss://dev.mockstarket.com/api/ws"
+	}else if (window.location.host.includes("10.0.0.")){ // Actex was here
+		wsUri = "wss://dev.mockstarket.com/api/ws"
 	}
-
 
 
 	var output;

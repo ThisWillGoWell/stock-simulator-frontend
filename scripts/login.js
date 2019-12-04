@@ -19,6 +19,9 @@ $( document ).ready(function() {
     } else if(window.location.host.includes("dev")){
         url = "https://dev.mockstarket.com";
         querystring="?dev=1";
+    } else if(window.location.host.includes("10.0.0.")){ // Actex was here
+        url = "https://dev.mockstarket.com";
+        querystring="?dev=1";
     }
 
 

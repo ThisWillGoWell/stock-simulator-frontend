@@ -300,6 +300,13 @@
 							<i class="material-icons right-arrow">keyboard_arrow_right</i>
 						</button>
 					</li>
+					<li v-if="is_admin()">
+						<button v-on:click="nav" data-route="admin">
+							<i class="material-icons menu-icon">rowing</i>
+							<div class="menu-item-title">Admin</div>
+							<i class="material-icons right-arrow">keyboard_arrow_right</i>
+						</button>
+					</li>
 					
 					<!-- <li>
 						<button v-on:click="nav" data-route="business">
@@ -922,6 +929,13 @@
 									</div>
 								</li>
 							</ul>
+						</div>
+					</div>
+					<div id="admin--view" class="view">
+						<div class="flex-grid--container">
+							<div class="flex-column-100">
+								<div class="item-category buffer-top">CREATE A NEW STOCK</div>
+							</div>
 						</div>
 					</div>
 				</div>
